@@ -1,142 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aadil Majeed Shah — Full-Stack Developer | MERN Stack | React 19 | Open to remote SWE roles" />
+  <title>Aadil Majeed Shah — Portfolio</title>
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+  <!-- Fonts: Bebas Neue (display) + DM Sans (body) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="left">Aadil's Portfolio</div>
-                <ul class="items"> 
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Projects</li>
-                        <li>Contact me</li>
-                </ul>           
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <div class="summary">
-                <div class="h1">
-                    <h1>SUMMARY</h1>
-                </div>
-                <div class="discription">
-                    <p>Motivated Computer Science student at MIET (AKTU) with hands-on experience in
-                        full-stack
-                        development and Android projects. Proficient in Java, Python, Node.js, SQL, and DSA
-                        problem solving. Eager to apply technical skills and certifications toward building impactful
-                        digital solutions. </p>
-                </div>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">AM<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mob-overlay" id="mobOverlay">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="home" class="hero">
+    <!-- Background layers -->
+    <div class="hero-bg">
+      <div class="dot-grid"></div>
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+    </div>
+
+    <div class="hero-body">
+      <!-- Available tag -->
+      <div class="avail-tag fade-in" style="animation-delay:.1s">
+        <span class="pulse-dot"></span>
+        Available for opportunities
+      </div>
+
+      <!-- Giant name -->
+      <h1 class="hero-name fade-in" style="animation-delay:.25s">
+        Aadil<br>Majeed<br><span class="outline-txt">Shah</span>
+      </h1>
+
+      <!-- Typewriter role -->
+      <div class="hero-role fade-in" style="animation-delay:.4s">
+        <span class="role-pre">I build</span>
+        <span id="tw"></span><span class="blink-cur">_</span>
+      </div>
+
+      <!-- Bio -->
+      <p class="hero-bio fade-in" style="animation-delay:.55s">
+        Full-Stack Developer from <strong>Jammu & Kashmir 🇮🇳</strong> — specializing in MERN Stack · React 19 · Node.js · Real-time Systems.
+        <br>Final year B.Tech CSE @ MIET Meerut · Open to remote roles.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-ctas fade-in" style="animation-delay:.7s">
+        <a href="#projects" class="btn-fill">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="mailto:shahaadii451@gmail.com" class="btn-outline">Let's Talk</a>
+      </div>
+
+      <!-- Social icons -->
+      <div class="hero-socials fade-in" style="animation-delay:.85s">
+        <a href="https://github.com/Aadill67" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/aadil-majeed-b88926280" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:shahaadii451@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="about sec">
+    <div class="wrap">
+      <p class="sec-eyebrow reveal">01 / About</p>
+      <div class="about-grid">
+        <div class="about-copy">
+          <h2 class="sec-title reveal">Who I Am</h2>
+          <p class="body-txt reveal">
+            I'm a final-year B.Tech CSE student at <strong>MIET Meerut</strong>, passionate about building production-grade applications that actually ship. My flagship project — <strong>LibraSync</strong> — is a full-stack MERN app with real-time WebSocket notifications, RBAC, analytics dashboards, QR code generation, email alerts, and JWT dual-token auth.
+          </p>
+          <p class="body-txt reveal">
+            I write clean, maintainable code and care deeply about strong architecture and interfaces that don't feel like templates. Actively seeking <strong>remote SWE roles</strong> — let's build something impactful together.
+          </p>
+          <div class="about-chips reveal">
+            <span><i class="fa-solid fa-location-dot"></i> Jammu & Kashmir, India</span>
+            <span><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE '26</span>
+            <span><i class="fa-solid fa-wifi"></i> Open to Remote</span>
+          </div>
+        </div>
+        <div class="stats-quad reveal">
+          <div class="s-card">
+            <span class="s-num">2+</span>
+            <span class="s-lbl">Years Coding</span>
+          </div>
+          <div class="s-card">
+            <span class="s-num">5+</span>
+            <span class="s-lbl">Projects Built</span>
+          </div>
+          <div class="s-card">
+            <span class="s-num">6</span>
+            <span class="s-lbl">Certifications</span>
+          </div>
+          <div class="s-card">
+            <span class="s-num">∞</span>
+            <span class="s-lbl">Chai Consumed ☕</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="skills sec alt-bg">
+    <div class="wrap">
+      <p class="sec-eyebrow reveal">02 / Stack</p>
+      <h2 class="sec-title reveal">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-box reveal">
+          <h3 class="skill-cat">Frontend</h3>
+          <div class="skill-chips">
+            <span><i class="fa-brands fa-react"></i> React 19</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span>⚡ Vite</span>
+            <span>🎞 Framer Motion</span>
+          </div>
+        </div>
+        <div class="skill-box reveal">
+          <h3 class="skill-cat">Backend</h3>
+          <div class="skill-chips">
+            <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span>🚂 Express.js</span>
+            <span>🔌 Socket.IO</span>
+            <span>🔐 JWT Auth</span>
+            <span>📮 REST APIs</span>
+            <span>📬 Nodemailer</span>
+          </div>
+        </div>
+        <div class="skill-box reveal">
+          <h3 class="skill-cat">Database & Cloud</h3>
+          <div class="skill-chips">
+            <span><i class="fa-solid fa-database"></i> MongoDB</span>
+            <span><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            <span>☁️ Vercel</span>
+            <span>📬 Postman</span>
+            <span>🏗 REST Design</span>
+          </div>
+        </div>
+        <div class="skill-box reveal">
+          <h3 class="skill-cat">Languages & CS</h3>
+          <div class="skill-chips">
+            <span><i class="fa-brands fa-java"></i> Java</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span>📊 DSA</span>
+            <span>🏛 OOP</span>
+            <span>🧮 Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="projects sec">
+    <div class="wrap">
+      <p class="sec-eyebrow reveal">03 / Work</p>
+      <h2 class="sec-title reveal">Featured Projects</h2>
+      <div class="proj-grid">
+
+        <!-- LibraSync — full width featured -->
+        <article class="proj-card proj-featured reveal">
+          <div class="proj-head">
+            <span class="proj-emoji">📚</span>
+            <span class="feat-badge">Flagship Project</span>
+            <div class="proj-icons">
+              <a href="https://github.com/Aadill67/LibraSync" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
+          </div>
+          <h3 class="proj-name">LibraSync</h3>
+          <p class="proj-desc">Production-grade Library Management System. Real-time WebSocket notifications, role-based access control (Admin / Librarian / Student), analytics dashboard with Recharts, QR code generation, email alerts via Nodemailer, JWT dual-token auth, PWA support, and cron job automation. 13+ fully-shipped features.</p>
+          <div class="proj-tags">
+            <span>React 19</span><span>Node.js</span><span>MongoDB</span>
+            <span>Socket.IO</span><span>JWT</span><span>Recharts</span><span>PWA</span>
+          </div>
+        </article>
 
-            <div class="skills">
-                <div class="h2">
-                    <h1>TECHNICAL SKILLS</h1>
-                </div>
-                <div class="explain">
-                    <div class="tech1"> <i class="fa-brands fa-html5"></i>HTML</div>
-                    <div class="tech1"><i class="fa-brands fa-css"></i>CSS</div>
-                    <div class="tech1"><i class="fa-brands fa-js"></i>JAVASCRIPT</div>
-                    <div class="tech1"><i class="fa-brands fa-bootstrap"></i>BOOTSTRAP</div>
-                    <div class="tech1"><i class="fa-brands fa-react"></i>REACT</div>
-                    <div class="tech1"><i class="fa-brands fa-java"></i>JAVA</div>
-                    <div class="tech1"><i class="fa-brands fa-node"></i>NODE.JS</div>
-                    <div class="tech1"><i class="fa-brands fa-python"></i>PYTHON</div>
-                    <div class="tech1"><i class="fa-solid fa-database"></i>MONGODB</div>
-                </div>
+        <!-- AlgoViz -->
+        <article class="proj-card reveal">
+          <div class="proj-head">
+            <span class="proj-emoji">⚡</span>
+            <div class="proj-icons">
+              <a href="https://github.com/Aadill67/AlgoViz" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
-            <div class="certification">
-                <div class="h3">
-                    <h1>CERTIFICATIONS</h1>
-                </div>
-                <div class="tickets">
-                    <div class="cert">Android Development Virtual Internship – Google & AICTE (Apr–Jun 2025) </div>
-                    <div class="cert"> AWS Academy Cloud Foundations – AWS Academy (Feb 2025) </div>
-                    <div class="cert">Cybersecurity Foundation Virtual Internship – Palo Alto Networks & ICT Academy
-                        (Jun 2024) </div>
-                    <div class="cert">Responsive Web Design – freeCodeCamp (2023) </div>
-                    <div class="cert">MongoDB Developer’s Toolkit – GeeksforGeeks (Jun 2025) (Jun 2025) </div>
-                    <div class="cert"> Data Analytics Job Simulation – Deloitte via Forage </div>
-                </div>
+          </div>
+          <h3 class="proj-name">AlgoViz</h3>
+          <p class="proj-desc">Interactive sorting algorithm visualizer — watch Bubble, Selection, Insertion, Merge, and Quick Sort animate live. Real-time comparison/swap counters, Big-O complexity display, speed & size controls, 4 input patterns.</p>
+          <div class="proj-tags">
+            <span>React 18</span><span>Vite</span><span>CSS Animations</span><span>DSA</span>
+          </div>
+        </article>
+
+        <!-- Time Scraper API -->
+        <article class="proj-card reveal">
+          <div class="proj-head">
+            <span class="proj-emoji">📡</span>
+            <div class="proj-icons">
+              <a href="https://github.com/Aadill67/time-scraper-api" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
-            <div class="education">
+          </div>
+          <h3 class="proj-name">Time Scraper API</h3>
+          <p class="proj-desc">Custom Node.js REST API that fetches and serves the latest stories from Time.com using native HTTP modules and web scraping. Zero external dependencies, clean JSON output.</p>
+          <div class="proj-tags">
+            <span>Node.js</span><span>HTTP</span><span>Web Scraping</span><span>REST API</span>
+          </div>
+        </article>
 
-                <div class="h2 h4">
-                    <h1>EDUCATION</h1>
-                </div>
-                <div class="schooling">
-                    <div class="insname insname1">
-                        B.Tech in Computer Science Engineering:
-                        Meerut Institute of Engineering and Technology, Meerut, India
-                        Graduation year: 2026
-                    </div>
-                    <div class="insname insname2">
-                        Higher Secondary (12th), Science Stream
-                        Higher Secondary School Qalamabad, Jammu and Kashmir, India
-                        Year of Completion: 2021
-                    </div>
-                    <div class="insname insname3">
-                        Secondary School (10th)
-                        Higher Secondary School Sanzipora, Jammu and Kashmir, India
-                        Year of Completion: 2019
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="projects">
-                <div class="h2 h5">
-                    <h1>PROJECTS</h1>
-                </div>
-                <div class="cntnt">
-                    <div class="prjts">
-                        Web Dev – freeCodeCamp (Self-Learning):
-                        Sep 2024 – Present - Completed hands-on projects in HTML, CSS, JavaScript, and responsive web
-                        design. - Built functional web applications and improved problem-solving skills. - Learned API
-                        integration and DOM manipulation techniques.
-                    </div>
-                    <div class="prjts">
-                        Resume App Full-Stack Practice:
-                        Aug 2024 – Present - Built a Resume Builder web app using HTML, CSS, JavaScript (or React, if
-                        used).
-                        - Integrated PDF export, template selection, and real-time editing features. - Improved form
-                    </div>
-                </div>
-            </div>
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <section id="certifications" class="certs sec alt-bg">
+    <div class="wrap">
+      <p class="sec-eyebrow reveal">04 / Credentials</p>
+      <h2 class="sec-title reveal">Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-ico">🤖</div>
+          <div class="cert-body">
+            <h4>Android Development Virtual Internship</h4>
+            <span class="cert-org">Google & AICTE</span>
+            <span class="cert-yr">Apr – Jun 2025</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-ico">☁️</div>
+          <div class="cert-body">
+            <h4>AWS Academy Cloud Foundations</h4>
+            <span class="cert-org">Amazon Web Services</span>
+            <span class="cert-yr">Feb 2025</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-ico">🔒</div>
+          <div class="cert-body">
+            <h4>Cybersecurity Foundation Virtual Internship</h4>
+            <span class="cert-org">Palo Alto Networks & ICT Academy</span>
+            <span class="cert-yr">Jun 2024</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-ico">💻</div>
+          <div class="cert-body">
+            <h4>Responsive Web Design</h4>
+            <span class="cert-org">freeCodeCamp</span>
+            <span class="cert-yr">2023</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-ico">🍃</div>
+          <div class="cert-body">
+            <h4>MongoDB Developer's Toolkit</h4>
+            <span class="cert-org">GeeksforGeeks</span>
+            <span class="cert-yr">Jun 2025</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-ico">📊</div>
+          <div class="cert-body">
+            <h4>Data Analytics Job Simulation</h4>
+            <span class="cert-org">Deloitte via Forage</span>
+            <span class="cert-yr">2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="communityservice">
-                <div class="h2 h6">
-                    <h1>COMMUNITY SERVICE</h1>
-                </div>
-                <div class="aicte">
-                    <div class="services">
-                        Student Mentor – AICTE SSSJKL (2025):
-                        Guided fellow scholarship students through academic documentation, portal use, and
-                        application workflows under the Special Scholarship Scheme for Jammu & Kashmir and
-                        Ladakh
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="edu sec">
+    <div class="wrap">
+      <p class="sec-eyebrow reveal">05 / Background</p>
+      <h2 class="sec-title reveal">Education</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-yr">2022 – 2026</span>
+            <h3>B.Tech, Computer Science Engineering</h3>
+            <p>Meerut Institute of Engineering & Technology (MIET), Meerut, India</p>
+            <span class="tl-badge">Current</span>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-yr">2021</span>
+            <h3>Higher Secondary (12th) — Science Stream</h3>
+            <p>Higher Secondary School Qalamabad, Jammu & Kashmir</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-yr">2019</span>
+            <h3>Secondary School (10th)</h3>
+            <p>Higher Secondary School Sanzipora, Jammu & Kashmir</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Community -->
+      <div class="community reveal">
+        <div class="comm-icon">🤝</div>
+        <div>
+          <h4>Student Mentor — AICTE SSSJKL (2025)</h4>
+          <p>Guided scholarship students through academic documentation, portal usage, and application workflows under the Special Scholarship Scheme for Jammu & Kashmir and Ladakh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="contact sec alt-bg">
+    <div class="wrap">
+      <p class="sec-eyebrow reveal" style="text-align:center">06 / Contact</p>
+      <div class="contact-inner">
+        <h2 class="contact-heading reveal">
+          Let's Work<br><span class="outline-txt">Together.</span>
+        </h2>
+        <p class="contact-sub reveal">
+          Open to full-time SWE roles, remote positions, and freelance projects. I respond fast — let's talk.
+        </p>
+        <div class="contact-rows reveal">
+          <a href="mailto:shahaadii451@gmail.com" class="c-row">
+            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+            <span>shahaadii451@gmail.com</span>
+            <i class="fa-solid fa-arrow-up-right-from-square c-arrow"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aadil-majeed-b88926280" target="_blank" rel="noopener" class="c-row">
+            <div class="c-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <span>linkedin.com/in/aadil-majeed</span>
+            <i class="fa-solid fa-arrow-up-right-from-square c-arrow"></i>
+          </a>
+          <a href="https://github.com/Aadill67" target="_blank" rel="noopener" class="c-row">
+            <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+            <span>github.com/Aadill67</span>
+            <i class="fa-solid fa-arrow-up-right-from-square c-arrow"></i>
+          </a>
+        </div>
+        <a href="mailto:shahaadii451@gmail.com" class="btn-fill reveal">
+          Send Me an Email <i class="fa-solid fa-paper-plane"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="wrap">
+      <p>Built by <strong>Aadil Majeed Shah</strong> · 2026 ·
+        <a href="https://github.com/Aadill67/personal-Portfolio" target="_blank" rel="noopener">Source</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══ JAVASCRIPT ═══ -->
+  <script>
+    // ── Typewriter ────────────────────────────────────────────────────────────
+    const roles = ['Full-Stack Apps.', 'MERN Projects.', 'React 19 UIs.', 'REST APIs.', 'Real-Time Systems.'];
+    let ri = 0, ci = 0, del = false;
+    const tw = document.getElementById('tw');
+
+    function tick() {
+      const cur = roles[ri];
+      tw.textContent = del ? cur.slice(0, --ci) : cur.slice(0, ++ci);
+      if (!del && ci === cur.length) { del = true; setTimeout(tick, 1900); return; }
+      if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; }
+      setTimeout(tick, del ? 42 : 88);
+    }
+    tick();
+
+    // ── Scroll reveal via IntersectionObserver ────────────────────────────────
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ── Nav: blur glass on scroll + active links ──────────────────────────────
+    const nav = document.getElementById('navbar');
+    const secs = document.querySelectorAll('section[id]');
+    const nLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('stuck', window.scrollY > 50);
+      let cur = '';
+      secs.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+      nLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${cur}`);
+      });
+    }, { passive: true });
+
+    // ── Smooth scroll ────────────────────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (!t) return;
+        e.preventDefault();
+        t.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('mobOverlay').classList.remove('open');
+        document.getElementById('burger').classList.remove('open');
+      });
+    });
+
+    // ── Hamburger ────────────────────────────────────────────────────────────
+    const burger = document.getElementById('burger');
+    const mob = document.getElementById('mobOverlay');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mob.classList.toggle('open');
+    });
+  </script>
 </body>
-
 </html>
